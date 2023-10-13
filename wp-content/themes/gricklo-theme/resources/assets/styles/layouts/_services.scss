@@ -1,0 +1,45 @@
+&__services {
+    background-color: #F1F6F9;
+
+    &--heading {
+        margin: 90px 0 50px;
+        font-weight: bold;
+        color: #1A213D;
+        font-size: 3.6em;
+        text-align: center;
+    }
+
+    &__content {
+        margin-bottom: 70px;
+
+        &__single-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            &__icon {
+                margin-bottom: 20px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            &--head {
+                margin-bottom: 20px;
+                font-size: 2.4em;
+                color: #1A213D;
+                font-weight: bold;
+            }
+
+            &--text {
+                color: #6A6063;
+                font-weight: 200;
+                font-size: 1.6em;
+                text-align: center;
+            }
+        }
+
+    }
+}

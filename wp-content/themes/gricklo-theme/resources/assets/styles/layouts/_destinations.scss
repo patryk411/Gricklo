@@ -1,0 +1,165 @@
+&__destination {
+    background-color: #fff;
+
+    &--heading {
+        font-size: 3.6em;
+        font-family: $work;
+        color: #1A213D;
+        text-align: center;
+        margin-bottom: 50px;
+        font-weight: bold;
+        margin-top: 100px;
+    }
+
+    &__content {
+        margin-bottom: 100px;
+
+        &__box {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .location-img {
+                transition: all .4s ease-out 0s;
+                position: relative;
+                overflow: hidden;
+                z-index: 0;
+                border-radius: 50%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    transform: scale(1);
+                    transition: all .4s ease-out 0s;
+                }
+
+                img:hover {
+                    transform: scale(1.05);
+                }
+
+                .location-details {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 0;
+                    right: 0;
+                    text-align: center;
+                    margin: 0 auto;
+                    z-index: 2;
+                    opacity: 0;
+                    transition: all .4s ease-out 0s;
+                        
+                        h4 {
+                            font-family: $work;
+                            color: #1A213D;
+                            margin-top: 0px;
+                            font-size: 1.6em;
+                            font-weight: 500;
+                            opacity: 0;
+
+                            a {
+                                color: #fff;
+                                font-size: 16px;
+                                font-weight: 600;
+                                display: inline-block;
+                                margin: 0;
+                                line-height: 1;
+                            }
+
+                            i {
+                                margin-left: 5px;
+                                color: #fff;
+                            }
+                        }
+
+                        h4:hover {
+                            letter-spacing: 0.5px;
+                            z-index: 5;
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                }
+
+                .location-details:hover {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+
+            .location-img::before {
+                transition: all .4s ease-out 0s;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                bottom: 0;
+                content: "";
+                background: rgba(26,33,61,0.5);
+                z-index: 1;
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            .location-img::after {
+                transition: all .4s ease-out 0s;
+                position: absolute;
+                width: 92%;
+                height: 91%;
+                bottom: 10px;
+                content: "";
+                border: 2px dotted #fff;
+                z-index: 1;
+                left: 8px;
+                border-radius: 50%;
+                opacity: 0;
+                visibility: hidden;
+                animation-name: rotateme;
+                animation-duration: 30s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+            }
+
+            .location-img:hover::before {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .location-img:hover::after {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .location-img:hover {
+                box-shadow: 0 10px 20px rgba(26,33,61,0.12);
+            }
+
+            &--title {
+                color: #1A213D;
+                font-size: 2.2em;
+                font-weight: bold;
+                padding-top: 20px;
+                transition: color .5s;
+            }
+            
+            a {
+                text-decoration: none;
+            }
+
+            &--title:hover {
+                color: $btncolor;
+            }
+        }
+    }
+}
+
+
+@keyframes rotateme {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

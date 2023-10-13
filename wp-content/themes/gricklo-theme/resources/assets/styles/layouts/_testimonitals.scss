@@ -1,0 +1,94 @@
+&__testimonitals {
+    background-color: #fff;
+
+    &__content {
+        margin: 90px 0 70px;
+
+        &__video {
+            .video-bg-img {
+                position: relative;
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+
+                .video-play {
+                    position: absolute;
+                    border: 37px solid rgba(255,255,255, .2);
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    width: 128px;
+                    height: 128px;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        &__right {
+            &__single-slide {
+
+            padding-left: 80px;
+            &--head {
+                font-size: 3.6em;
+                font-family: $work;
+                color: #000;
+                margin-bottom: 40px;
+                font-weight: bold;
+            }
+
+            &--text {
+                border-radius: 5px;
+                font-family: $mulish;
+                padding: 30px 100px 30px 40px;
+                margin-bottom: 32px;
+                font-size: 2em;
+                position: relative;
+                color: #1A213D;
+                background-color: #F1F6F9;
+            }
+
+            &--text::before {
+                position: absolute;
+                height: 35px;
+                width: 35px;
+                background-color: #F1F6F9;
+                content: '';
+                left: 23px;
+                bottom: -8px;
+                transform: rotate(45deg);
+            }
+
+            &__person {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: start;
+                
+                &__img {
+                    img {
+                        width: 69px;
+                        height: 69px;
+                    }
+                }
+
+                &__text {
+                    margin-left: 20px;
+                    &--name {
+                        font-size: 2em;
+                        font-family: $work;
+                        color:#1A213D;
+                        font-weight: bold;
+                    }
+
+                    &--text {
+                        font-size: 1.6em;
+                        font-family: $mulish;
+                        color: #68696E;
+                    }
+                }
+            }
+        }
+      }
+    }
+}

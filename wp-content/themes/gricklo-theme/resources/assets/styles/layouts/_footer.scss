@@ -1,0 +1,101 @@
+.content-info {
+    background-color: #1A213D;
+    &__content {
+        padding: 80px 0 40px;
+        &__box {
+
+            .footer-brand {
+                margin-bottom: 35px;
+            }
+
+            &--heading {
+                font-family: $work;
+                font-size: 2em;
+                color: #fff;
+                margin-bottom: 30px;
+            }
+
+            &--text {
+                font-size: 1.6em;
+                font-family: $mulish;
+                color: #A4A6AE;
+                margin-bottom: 20px;
+            }
+
+            &__icons {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: start;
+                margin-bottom: 10px;
+
+                i {
+                    color: #677F8B;
+                    font-size: 2em;
+                    margin-right: 24px;
+                }
+            }
+
+            &__list {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: center;
+
+                &--link {
+                    color: #A4A6AE;
+                    font-family: $mulish;
+                    margin-bottom: 15px;
+                    font-size: 1.8em;
+                    transition: color .5s;
+                }
+
+                &--link:hover {
+                    color: #fff;
+                }
+            }
+
+            .mb-3 {
+                position: relative;
+                .form-control {
+                    width: 100%;
+                    padding: 25px 20px;
+                    border: 1px solidd #A4A6AE;
+                    border-radius: 30px;
+                    background: none;
+                    color: #A4A6AE;
+                    font-size: 1.6em;
+                }
+
+                .btn-footer-input {
+                    i {
+                        font-size: 1.8em;
+                        position: absolute;
+                        right: 20px;
+                        top: 15px;
+                        color: $btncolor;
+                    }
+                }
+            }
+
+        }
+    }
+
+    &__bottom {
+        padding: 40px 0 20px;
+        &--text {
+            text-align: center;
+            font-size: 1.4em;
+            font-family: $mulish;
+            margin-bottom: 0;
+            color: #A4A6AE;
+
+            i,
+            .logo-bottom {
+                color: $btncolor;
+            }
+
+
+        }
+    }
+}

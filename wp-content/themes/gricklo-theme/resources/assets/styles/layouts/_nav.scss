@@ -1,0 +1,179 @@
+.navbar {
+        position: fixed;
+        z-index: 10;
+        padding: 0 100px;
+            .navbar-left {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                .navbar-brand {
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .collapse {
+                    
+                    .form-nav {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: center;
+                        position: relative;
+                        margin: 0 40px;
+                        
+                        input {
+                            background-color: rgba(255,255,255,0.25);
+                            border-radius: 30px;
+                            border: 1px solid rgba(35, 47, 85, .15);
+                            width: 100%;
+                            padding: 10px 20px 10px 50px;
+                            font-size: 1.6em;
+                            height: 50px;
+                            width: 100%;
+                            color: #fff;
+                        }
+                        
+                        .form-control::placeholder {
+                            color: #fff;
+                        }
+
+                        .form-nav-icon {
+                            position: absolute;
+                            top: 18px;
+                            left: 25px;
+                            i {
+                                font-size: 1.5em;
+                            }
+                        }
+                    }
+
+                    .navbar-nav {
+                        .nav-item {
+                            margin: 0 10px;
+                            position: relative;
+                            .nav-link {
+                                position: relative;
+                                font-family: $work;
+                                font-size: 1.6em;
+                                padding: 28px 5px;
+                                color: #fff;
+                                font-weight: bold;
+                                transition: color .5s;
+                            }
+
+                            
+                            .nav-link:hover {
+                                color: $btncolor;
+                            }
+
+                            .dropdown-menu {
+                                position: absolute;
+                                width: 170px;
+                                background: rgba(26,33,61,0.8);
+                                left: 0;
+                                top: 98%;
+                                box-shadow: 0 0 10px 3px rgba(0,0,0,0.05);
+                                padding: 17px 0;
+                                transition: all .3s ease-out 0s;
+                                border: none;
+                                border-radius: 0px;
+
+                                li {
+                                    margin-left: 7px;
+                                    display: block;
+
+                                    a {
+                                        font-family: $work;
+                                        font-size: 1.6em;
+                                        color: #fff;
+                                        font-weight: 600;
+                                        transition: padding-left .5s;
+                                    }
+
+                                    a:hover {
+                                        color: #fff;
+                                        background: none;
+                                        padding-left: 13px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            .navbar-right {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                font-family: $work;
+                margin-right: 80px;
+
+                .sign-in {
+                    text-decoration: none;
+                    color: #fff;
+                    font-size: 1.6em;
+                    margin-right: 30px;
+                    transition: color .5s;
+                }
+
+                .sign-in:hover {
+                    color: $btncolor;
+                }
+
+                .btn {
+                    background: #4DB7FE;
+                    font-family: "Work Sans",sans-serif;
+                    text-transform: inherit;
+                    color: #fff;
+                    padding: 25px;
+                    cursor: pointer;
+                    display: inline-block;
+                    font-size: 16px;
+                    font-weight: 500;
+                    border-radius: 30px;
+                    line-height: 1;
+                    line-height: 0;
+                    cursor: pointer;
+                    transition: color 0.4s linear;
+                    position: relative;
+                    z-index: 1;
+                    border: 0;
+                    overflow: hidden
+                }
+                
+                .btn::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 102%;
+                    height: 102%;
+                    background: #1A213D;
+                    z-index: 1;
+                    border-radius: 0px;
+                    transition: transform 0.5s;
+                    transition-timing-function: ease;
+                    transform-origin: 0 0;
+                    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+                    transform: scaleX(0);
+                    border-radius: 0px
+                }
+                
+                .btn i {
+                    padding-right: 11px
+                }
+                
+                .btn:hover {
+                    color: #fff;
+                }
+                
+                .btn:hover::before {
+                    transform: scaleX(1);
+                    z-index: -1
+            }
+        }
+    }

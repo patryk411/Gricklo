@@ -1,0 +1,73 @@
+@import "common/variables";
+
+/** Import everything from autoload */
+@import "./autoload/**/*";
+
+/**
+ * Import npm dependencies
+ *
+ * Prefix your imports with `~` to grab from node_modules/
+ * @see https://github.com/webpack-contrib/sass-loader#imports
+ */
+// @import "~some-node-module";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #333;
+    color: #fff;
+    font-family: $mulish;
+}
+
+.shadow-bg {
+    background-color: rgba(26,33,61,0.8);
+}
+
+/** Import theme styles */
+@import "common/global";
+@import "components/buttons";
+@import "components/comments";
+@import "components/forms";
+@import "components/wp-classes";
+@import "layouts/header";
+@import "layouts/sidebar";
+@import "layouts/footer";
+@import "layouts/pages";
+@import "layouts/posts";
+@import "layouts/tinymce";
+@import "layouts/nav";
+@import "layouts/nav-mobile";
+@import "layouts/baner-img";
+
+
+.main {    
+    @import "layouts/destinations";
+    @import "layouts/interested";
+    @import "layouts/popular";
+    @import "layouts/work";
+    @import "layouts/services";
+    @import "layouts/testimonitals";
+}
+
+
+@import "layouts/listing-section";
+@import "layouts/about-section";
+@import "layouts/blog-section";
+@import "layouts/single-section";
+@import "layouts/contact-section";
+
+@import "layouts/media576";
+@import "layouts/media768";
+@import "layouts/media991";
+@import "layouts/media1200";
+

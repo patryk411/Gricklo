@@ -1,0 +1,91 @@
+&__work  {
+    background-color: #fff;
+    &__content {
+        margin: 50px 0 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+        &__box {
+            padding: 30px 50px;
+            border: 1px solid #DEE0E5;
+            border-radius: 5px;
+            
+            &__text {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                &__left {
+                    &--heading {
+                        font-size: 2.4em;
+                        font-family: $work;
+                        color: #1a213d;
+                        font-weight: bold;
+                    }
+
+                    &--text {
+                        font-size: 1.8em;
+                        font-family: $mulish;
+                        color: #000;
+                    }
+                }
+
+                &__left {
+                    .work-section {
+                        background: #4DB7FE;
+                        font-family: "Work Sans",sans-serif;
+                        text-transform: inherit;
+                        color: #fff;
+                        padding: 25px;
+                        cursor: pointer;
+                        display: inline-block;
+                        font-size: 16px;
+                        font-weight: 500;
+                        border-radius: 30px;
+                        line-height: 1;
+                        line-height: 0;
+                        cursor: pointer;
+                        transition: color 0.4s linear;
+                        position: relative;
+                        z-index: 1;
+                        border: 0;
+                        overflow: hidden
+                    }
+
+                    .work-section::before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 102%;
+                        height: 102%;
+                        background: #1A213D;
+                        z-index: 1;
+                        border-radius: 0px;
+                        transition: transform 0.5s;
+                        transition-timing-function: ease;
+                        transform-origin: 0 0;
+                        transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+                        transform: scaleX(0);
+                        border-radius: 0px
+                    }
+                    
+                    .work-section i {
+                        padding-right: 11px
+                    }
+                    
+                    .work-section:hover {
+                        color: #fff;
+                    }
+                    
+                    .work-section:hover::before {
+                        transform: scaleX(1);
+                        z-index: -1
+                }
+                }
+            }
+        }
+    }
+}
